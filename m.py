@@ -1,6 +1,6 @@
 # Multiple Inheritance
 
-class Animal:
+class Creature:
     def __init__(self, c, e):
         self.color = c
         self.eat = e
@@ -17,14 +17,14 @@ class Pet:
         print(f"Owner : {self.owner}")
 
 
-class Dog(Pet, Animal):
+class Dog(Pet, Creature):
     def __init__(self, n, c, e, o):
-        Animal.__init__(self, c, e)
+        Creature.__init__(self, c, e)
         Pet.__init__(self, o)
         self.name = n
 
     def Show_info(self):
-        Animal.Show_info(self)
+        Creature.Show_info(self)
         Pet.Show_info(self)
         print(f"Dog name: {self.name}")
 
